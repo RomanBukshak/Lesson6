@@ -1,4 +1,4 @@
-package UI_test.StepDefinition;
+package Tests.StepDefinition.APISteps;
 
 import io.cucumber.java.ru.Дано;
 import io.cucumber.java.ru.Затем;
@@ -32,6 +32,7 @@ public class TestApiStepsRickAndMorty {
                 .then()
                 .assertThat()
                 .statusCode(200)
+                .log().all()
                 .extract().response();
         JSONObject mortySmith = (JSONObject) new JSONObject(findInfoAboutMortySmith.getBody().asString()).getJSONArray("results").get(0);
         mortySmithID = mortySmith.get("id").toString();
@@ -53,6 +54,7 @@ public class TestApiStepsRickAndMorty {
                 .then()
                 .assertThat()
                 .statusCode(200)
+                .log().all()
                 .extract().response();
         lastEpisodeID = (int) new JSONObject(findLastEpisode.getBody().asString()).getJSONObject("info").get("count");
     }
@@ -65,6 +67,7 @@ public class TestApiStepsRickAndMorty {
                 .then()
                 .assertThat()
                 .statusCode(200)
+                .log().all()
                 .extract().response();
         lastEpisodeName = new JSONObject(findLastCharacterIDInLastEpisode.getBody().asString()).get("name").toString();
         System.out.println("Last episode ID: " + lastEpisodeID);
@@ -82,6 +85,7 @@ public class TestApiStepsRickAndMorty {
                 .then()
                 .assertThat()
                 .statusCode(200)
+                .log().all()
                 .extract().response();
         lastCharacterInLastEpisodeName = new JSONObject(infoLastCharacterInLastEpisode.getBody().asString()).get("name").toString();
         System.out.println("Last character in last episode ID: " + lastCharacterInLastEpisodeID);

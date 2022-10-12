@@ -1,11 +1,11 @@
-package UI_test.StepDefinition;
+package Tests.StepDefinition.UISteps;
 
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
 import io.qameta.allure.Step;
 
 
-import static UI_test.PageObject.PageElements.TestProjectPageElem.*;
+import static Tests.PageObject.TestProjectPageElem.*;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 

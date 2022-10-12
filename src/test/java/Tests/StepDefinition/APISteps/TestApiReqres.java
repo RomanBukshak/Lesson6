@@ -1,4 +1,4 @@
-package UI_test.StepDefinition;
+package Tests.StepDefinition.APISteps;
 
 import io.cucumber.java.ru.Затем;
 import io.restassured.http.ContentType;
@@ -17,7 +17,7 @@ import static utils.Configuration.getConfigurationValue;
 public class TestApiReqres {
     @Затем("Отправить запрос на reqres и сравнить результат")
     public static void отправитьЗапросНаReqresИСравнитьРезультат() throws IOException {
-        JSONObject body = new JSONObject(new String(Files.readAllBytes(Paths.get("src/test/java/Api_test/Reqres/json/reqres.json"))));
+        JSONObject body = new JSONObject(new String(Files.readAllBytes(Paths.get("src/test/java/Json/reqres.json"))));
         Response createUser = given()
                 .contentType(ContentType.JSON)
                 .body(body.put("name", "Tomato"))
@@ -28,6 +28,7 @@ public class TestApiReqres {
                 .post("api/users")
                 .then()
                 .statusCode(201)
+                .log().all()
                 .extract().response();
         JSONObject createNewUser = new JSONObject(createUser.getBody().asString());
         Assertions.assertEquals(createNewUser.getString("name"), body.getString("name"), "Имена не совпадают!");

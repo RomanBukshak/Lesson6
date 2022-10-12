@@ -1,3 +1,4 @@
+
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -9,17 +10,16 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/API_features",
+        features = {"src/test/resources/UI_features", "src/test/resources/API_features"},
         plugin = {"pretty", "io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm",
                 "json:target/cucumber.json", "html:test-output" },
-        glue = {"UI_test/StepDefinition", "Hooks"},
-        tags = "@Test_API1"
+        glue = {"Tests/StepDefinition/APISteps", "Hooks", "Tests/StepDefinition/UISteps"},
+        tags = "@Test"
 )
 
-public class RunnerTestApi {
+public class RunnerTest {
     @BeforeClass
     public static void before () {
-
         SelenideLogger.addListener("AllureSelenide",
                 new AllureSelenide().
                         screenshots(true).

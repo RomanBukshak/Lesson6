@@ -1,4 +1,5 @@
 #language: ru
+  @Test
   @Test_UI
   Функция: Проверка статуса задачи
     Сценарий: проверка статуса задачи TestSelenium_bug

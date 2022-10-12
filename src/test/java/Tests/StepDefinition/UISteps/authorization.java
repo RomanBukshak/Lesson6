@@ -1,16 +1,12 @@
-package UI_test.StepDefinition;
+package Tests.StepDefinition.UISteps;
 
 import com.codeborne.selenide.Condition;
 import io.cucumber.java.ru.И;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
-import io.qameta.allure.Step;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
 
 
-import static UI_test.PageObject.PageElements.AuthorizationPageElem.*;
+import static Tests.PageObject.AuthorizationPageElem.*;
 import static com.codeborne.selenide.Selenide.open;
 import static utils.Configuration.getConfigurationValue;
 

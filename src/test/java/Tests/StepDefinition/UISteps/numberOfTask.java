@@ -1,4 +1,4 @@
-package UI_test.StepDefinition;
+package Tests.StepDefinition.UISteps;
 
 import com.codeborne.selenide.Condition;
 import io.cucumber.java.ru.И;
@@ -6,8 +6,8 @@ import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
 import io.qameta.allure.Step;
 
-import static UI_test.PageObject.PageElements.TestProjectPageElem.numberOfTaskList;
-import static UI_test.PageObject.PageElements.TestProjectPageElem.taskList;
+import static Tests.PageObject.TestProjectPageElem.numberOfTaskList;
+import static Tests.PageObject.TestProjectPageElem.taskList;
 
 public class numberOfTask {
 

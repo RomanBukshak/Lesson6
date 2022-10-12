@@ -1,4 +1,4 @@
-package UI_test.StepDefinition;
+package Tests.StepDefinition.UISteps;
 
 import com.codeborne.selenide.Condition;
 import io.cucumber.java.ru.И;
@@ -6,7 +6,7 @@ import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
 import io.qameta.allure.Step;
 
-import static UI_test.PageObject.PageElements.CreatNewTaskElem.*;
+import static Tests.PageObject.CreatNewTaskElem.*;
 
 public class creatNewTask {
 

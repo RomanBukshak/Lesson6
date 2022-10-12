@@ -1,4 +1,4 @@
-package UI_test.StepDefinition;
+package Tests.StepDefinition.UISteps;
 
 import com.codeborne.selenide.Condition;
 import io.cucumber.java.ru.Дано;
@@ -7,9 +7,9 @@ import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
 import io.qameta.allure.Step;
 
-import static UI_test.PageObject.PageElements.LoggedPageElem.projectTest;
-import static UI_test.PageObject.PageElements.LoggedPageElem.projectsDropButton;
-import static UI_test.PageObject.PageElements.TestProjectPageElem.imgTest;
+import static Tests.PageObject.LoggedPageElem.projectTest;
+import static Tests.PageObject.LoggedPageElem.projectsDropButton;
+import static Tests.PageObject.TestProjectPageElem.imgTest;
 
 
 public class openProject {
