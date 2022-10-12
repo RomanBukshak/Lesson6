@@ -12,10 +12,10 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm",
                 "json:target/cucumber.json", "html:test-output" },
         glue = {"UI_test/StepDefinition", "Hooks"},
-        tags = "@Test"
+        tags = "@Test_UI"
 )
 
-public class RunnerTest {
+public class RunnerTestUI {
 
     @BeforeClass
     public static void before() {
